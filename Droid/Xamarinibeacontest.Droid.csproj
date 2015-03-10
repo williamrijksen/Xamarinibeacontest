@@ -57,16 +57,14 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.3.1.6296\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="AndroidAltBeaconLibrary">
-      <HintPath>..\Components\android-altbeacon-library-2.0\lib\android\AndroidAltBeaconLibrary.dll</HintPath>
+    <Reference Include="Estimotes.Xamarin.Android">
+      <HintPath>..\packages\Estimotes-Xamarin.1.0.20141223.0\lib\MonoAndroid43\Estimotes.Xamarin.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MonitorNotifier.cs" />
-    <Compile Include="RangeNotifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -89,8 +87,8 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <ItemGroup>
-    <XamarinComponentReference Include="android-altbeacon-library">
-      <Version>2.0</Version>
+    <XamarinComponentReference Include="estimotesdk">
+      <Version>1.0.20141223</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

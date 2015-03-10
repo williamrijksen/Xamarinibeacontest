@@ -3,26 +3,16 @@
 	<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="19" />
 	<uses-sdk android:targetSdkVersion="19" />
 	<application android:label="IBeacon Xamarin Test" android:icon="@drawable/icon">
-		<service android:enabled="true" android:exported="true" android:isolatedProcess="false" android:label="Beacon" android:name="org.altbeacon.beacon.service.BeaconService">
-		</service>
-		<service android:enabled="true" android:name="org.altbeacon.beacon.BeaconIntentProcessor">
-			<meta-data android:name="background" android:value="true" />
-			<intent-filter android:priority="1">
-				<action android:name="org.altbeacon.xamarinbeaconreference.MSG_STOP_RANGING" />
-				<action android:name="org.altbeacon.xamarinbeaconreference.MSG_STOP_MONITORING" />
-				<action android:name="org.altbeacon.xamarinbeaconreference.MSG_START_RANGING" />
-				<action android:name="org.altbeacon.xamarinbeaconreference.MSG_START_MONITORING" />
-			</intent-filter>
-		</service>
-		<receiver android:name="org.altbeacon.beacon.startup.StartupBroadcastReceiver">
-			<intent-filter>
-				<action android:name="android.intent.action.BOOT_COMPLETED" />
-				<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-				<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-			</intent-filter>
-		</receiver>
+		<service android:name="com.estimote.sdk.service.BeaconService" android:exported="false" />
 	</application>
 	<uses-permission android:name="android.permission.BLUETOOTH" />
 	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
 </manifest>
