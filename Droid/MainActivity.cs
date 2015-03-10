@@ -137,5 +137,6 @@ namespace Xamarinibeacontest.Droid
 				}
 			});
 		}
+
 	}
 }
