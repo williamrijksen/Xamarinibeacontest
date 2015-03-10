@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+    <Button
+        android:text="Start scanning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scanButton"
+        android:textColor="#000000"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:enabled="true" />
+    <TextView
+        android:text="Not scanning now..."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="39.5dp"
+        android:textColor="#000000"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:id="@+id/scanLabel" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="10dp"
+        android:id="@+id/space1" />
+    <TextView
+        android:text="0 beacons found"
+        android:textColor="#000000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:id="@+id/results" />
+</LinearLayout>
